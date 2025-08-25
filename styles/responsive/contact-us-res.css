@@ -1,0 +1,58 @@
+@media (max-width: 1091px) {
+  .social-media {
+    width: 30%;
+  }
+}
+
+@media (max-width: 910px) {
+  .social-media-section {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .social-media {
+    min-width: 10rem;
+    width: auto;
+    max-width: 12rem;
+  }
+}
+
+@media (max-width: 690px) {
+  .social-media {
+    min-width: 7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-sec {
+    flex-direction: column;
+  }
+
+  .social-media-section {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .contact-form {
+    padding: 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .social-media-section {
+    margin-top: 5rem;
+  }
+
+  .section-heading::after {
+    width: 30%;
+  }
+}
+
+@media (max-width: 350px) {
+  .contact-input {
+    width: 17rem;
+  }
+}

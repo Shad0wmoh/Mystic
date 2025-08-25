@@ -1,0 +1,98 @@
+header {
+  padding: 3rem;
+}
+
+.section-heading {
+  font-size: 2.75em;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+.section-heading::after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  width: 10%;
+  height: 0.5rem;
+  left: 0;
+  bottom: -1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5rem;
+  gap: 2rem;
+}
+
+.contact-input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  width: 20rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.submit-btn {
+  max-width: 7rem;
+  font-family: "Montserrat", sans-serif;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  font-weight: 500;
+  border-radius: 2rem;
+  border: 0.1rem black solid;
+  cursor: pointer;
+  transition: 0.25s all ease;
+}
+
+.submit-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.contact-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-media {
+  width: 25%;
+  border: 0.2rem black solid;
+  padding: 2rem;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
+.social-media:nth-child(1):hover {
+  rotate: 360deg;
+  border-radius: 20%;
+}
+
+.social-media:nth-child(1) {
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.social-media:nth-child(2):hover {
+  rotate: 360deg;
+  border-radius: 20%;
+}
+
+.social-media:nth-child(2) {
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.social-icon {
+  object-fit: contain;
+  width: 100%;
+}

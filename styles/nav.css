@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+body {
+  background-image: url("/assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: black 0.0625rem solid;
+  font-weight: 500;
+}
+
+.links-sec {
+  display: flex;
+  column-gap: 1.5rem;
+  align-items: center;
+}
+
+.link {
+  transition: all 0.5s;
+  font-size: 1.05em;
+}
+
+.link:hover {
+  color: brown;
+}
+
+.logo-sec {
+  margin-left: 7rem;
+}
+
+.responsive-logo-sec {
+  display: none;
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 10rem;
+  text-align: center;
+}
+
+.responsive-logo-img {
+  object-fit: contain;
+  width: 120%;
+  height: 5rem;
+  filter: brightness(0);
+}
+
+.logo-img {
+  object-fit: contain;
+  width: 120%;
+  height: 5rem;
+  filter: brightness(0);
+}
+
+.utils-sec {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.util-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.util-btn-img {
+  width: 2rem;
+}
+
+.cart-btn {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.cart-counter {
+  font-family: "Montserrat", sans-serif;
+  background-color: black;
+  color: white;
+  padding: 0.15rem 0.25rem;
+  border-radius: 1rem;
+  font-size: 0.75em;
+  position: absolute;
+  right: -0.25rem;
+  top: -0.5rem;
+}
+
+.responsive-nav-util {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-line {
+  height: 0.3125rem;
+  width: 1.875rem;
+  margin: 0.3125rem 0;
+  border-radius: 1.25rem;
+  background-color: black;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.press-change .line-1 {
+  transform: translateY(10px) rotate(-45deg);
+}
+
+.press-change .line-2 {
+  opacity: 0;
+}
+
+.press-change .line-3 {
+  transform: translateY(-10px) rotate(45deg);
+}
+
+.responsive-nav-menu {
+  display: none;
+  position: absolute;
+  background-color: black;
+  z-index: 100;
+  top: 5rem;
+  left: 2rem;
+  border-radius: 1rem;
+}
+
+.responsive-links-sec {
+  padding: 0.5rem 1rem;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.responsive-links-sec * {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.responsive-link {
+  text-align: center;
+}
+
+.responsive-utils {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 1000px) {
+  .logo-sec {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .links-sec,
+  .utils-sec {
+    display: none;
+  }
+
+  .responsive-nav-util {
+    display: block;
+  }
+
+  .responsive-logo-sec {
+    display: block;
+  }
+
+  nav {
+    padding: 2rem 2rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .responsive-logo-sec {
+    width: 9rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .responsive-logo-sec {
+    width: 8rem;
+  }
+}

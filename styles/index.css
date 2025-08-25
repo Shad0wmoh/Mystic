@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+body {
+  background-image: url("/assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-text-size-adjust: 100%; /* prevent Safari text zoom */
+}
+
+a {
+  text-decoration: none;
+}
+
+.carousel {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  position: relative; /* ensures absolute children behave consistently */
+}
+
+.img-carousel {
+  position: relative;
+  width: 100%;
+}
+
+.txt-desc {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3rem;
+  z-index: 15;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.slogan,
+.sub-slogan {
+  color: white;
+  font-family: "Playwrite HU", sans-serif;
+}
+
+.slogan {
+  font-size: clamp(1em, 2vw + 1em, 3em);
+  white-space: nowrap;
+  margin-bottom: 1rem;
+  text-shadow: 0.15rem 0.15rem black;
+}
+
+.sub-slogan {
+  font-size: clamp(1em, 2vw + 0.5em, 2.25em);
+  color: white;
+  text-shadow: 0.15rem 0.15rem black;
+}
+
+.slides-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.slide.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.offer-txt {
+  font-family: "Playwrite HU", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  bottom: 8rem;
+  transform: translateX(-50%);
+  font-size: clamp(0.25em, 1vw + 0.75em, 2em);
+  color: black;
+  max-width: 90%;
+  text-transform: capitalize;
+}
+
+.shop-btn {
+  font-family: "Georgia", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: white solid 0.1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem); /* Safari support */
+  border-radius: 1rem;
+  transition: all 0.25s;
+  position: absolute;
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  font-size: clamp(1em, 1vw + 0.75em, 1.5em);
+  color: white;
+  cursor: pointer;
+}
+
+.shop-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.img-nav-btns {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.img-btn {
+  background-color: white;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.img-btn.active {
+  opacity: 1;
+}
+
+.best-sellers-section {
+  margin-top: 3rem;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: clamp(1.5em, 2vw + 1.25em, 3em);
+  font-weight: 300;
+  margin-bottom: 2rem;
+  font-family: "Playwrite HU", serif;
+  text-transform: capitalize;
+}
+
+.products-showcase {
+  padding: min(2rem, 8%);
+  display: flex;
+  justify-content: space-evenly;
+  row-gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.product {
+  border-radius: 0.5rem;
+  box-shadow: 0.0625rem 0.0625rem 2rem -0.1875rem rgba(0, 0, 0, 0.75);
+  max-width: 18rem;
+}
+
+.product-img {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.product-info {
+  text-align: center;
+}
+
+.product-info * {
+  margin: 0.15rem;
+  font-size: clamp(1.25em, 1vw + 0.5em, 1.15em);
+  font-family: "Georgia", sans-serif;
+}
+
+.product-nav {
+  display: flex;
+}
+
+.add-to-cart-btn,
+.show-info-btn {
+  padding: min(0.5rem, 8%);
+  text-transform: capitalize;
+  width: 99%;
+  border-radius: 1rem;
+  border: black 0.1rem solid;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: transparent; /* fixed from 'none' */
+  transition: all 0.15s ease;
+}
+
+.add-to-cart-btn:hover,
+.show-info-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.our-story-section {
+  position: relative;
+  height: 120dvh; /* better for iOS Safari */
+  min-height: -webkit-fill-available; /* fallback */
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.story-info {
+  border-radius: 1rem;
+  width: 90%;
+  box-shadow: 0 0 1.5rem black;
+}
+
+.story-img {
+  position: absolute;
+  transform: translateX(-50%);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5);
+}
+
+.story-img:nth-child(1) {
+  width: 25rem;
+  left: 25%;
+}
+
+.story-img:nth-child(2) {
+  width: 30rem;
+  left: 40%;
+  bottom: 3rem;
+}
+
+.story-img:nth-child(3) {
+  width: 27rem;
+  bottom: 2rem;
+  left: 67%;
+}
+
+.story {
+  font-family: "Georgia", sans-serif;
+  width: 40%;
+  position: absolute;
+  text-align: center;
+  left: 65%;
+  top: 10rem;
+  font-size: 1.5em;
+  transform: translateX(-50%);
+}
+
+.categories-section {
+  padding: min(2rem, 8%);
+  margin-top: 2rem;
+}
+
+.categories-showcase {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.category {
+  width: 20rem;
+  height: 30rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  position: relative;
+  box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5);
+}
+
+.category-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+  scale: 1.25;
+  filter: blur(0.25rem);
+}
+
+.category-info {
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  transform: translate(-50%, 50%); /* fixed Safari 'translate' */
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Georgia", sans-serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.category-name,
+.category-nav {
+  color: white;
+  transition: all 0.5s;
+}
+
+.category-name {
+  font-size: clamp(1.25em, 2vw + 1.25em, 2em);
+}
+
+.category-nav {
+  border: 0.1625rem white solid;
+  border-radius: 0.625rem;
+  padding: 0.4rem 0.4rem;
+  font-size: clamp(0.9em, 1vw + 1em, 1.25em);
+}
+
+.category-nav:hover {
+  color: black;
+  background-color: white;
+}
+
+.add-to-cart-popup-hidden {
+  position: fixed;
+  z-index: 100;
+  top: 8rem;
+  right: -10rem;
+  transition: 0.25s all ease;
+  opacity: 0;
+}
+
+.add-to-cart-txt {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1em, 1vw + 0.5em, 1.25em);
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.add-to-cart-popup-shown {
+  position: fixed;
+  top: 7.5rem;
+  right: 2rem;
+  transition: 0.25s all ease;
+  opacity: 1;
+  z-index: 1001;
+}
+
+.show-info-container {
+  scale: 0;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* fixed Safari 'translate' */
+  z-index: 1000;
+  display: flex;
+  column-gap: 7rem;
+  align-items: center;
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  box-shadow: 0 0 1rem black;
+  width: 90%;
+  height: 90%;
+  padding: min(2rem, 1%);
+  transition: 0.15s all ease;
+}
+
+.show-info-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26.633rem;
+  border-radius: 2rem;
+}
+
+.main-img,
+.sub-img {
+  border: 0.01rem gray solid;
+}
+
+.main-img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.sub-imgs-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sub-img {
+  height: 25%;
+  object-fit: contain;
+}
+
+.show-info-desc-container {
+  display: flex;
+  height: 75%;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.show-info-desc-container * {
+  font-family: "Georgia", sans-serif;
+}
+
+.show-info-name {
+  font-size: 3em;
+}
+
+.show-info-price {
+  font-size: 2em;
+}
+
+.show-info-size {
+  font-size: 1.75em;
+}
+
+.show-info-desc {
+  width: 75%;
+}
+
+.show-info-utils {
+  margin-top: 1rem;
+  width: 25%;
+  display: flex;
+  column-gap: 3rem;
+}
+
+.quantity-counter {
+  border-radius: 1rem;
+  font-size: 1.25em;
+  padding: 0.25rem 0.5rem;
+}
+
+.show-info-atc-btn {
+  padding: 0.75rem 1.25rem;
+  text-transform: capitalize;
+  border-radius: 1rem;
+  border: black 0.1rem solid;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: transparent; /* fixed from 'none' */
+  transition: all 0.15s ease;
+  display: inline-block;
+  writing-mode: horizontal-tb;
+  white-space: nowrap;
+  line-height: normal;
+}
+
+.show-info-atc-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.exit-btn {
+  position: absolute;
+  right: 5rem;
+  top: 2rem;
+  font-size: 1.5em;
+  cursor: pointer;
+  font-family: "Playwrite HU", sans-serif;
+  border: none;
+  border-radius: 0.25rem;
+  background: transparent;
+}

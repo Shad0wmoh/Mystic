@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap");
+
+.section-heading {
+  text-align: center;
+  font-family: "Playwrite HU", sans-serif;
+  font-size: clamp(2em, 2vw + 3em, 4em);
+  margin-top: 0.75rem;
+}
+
+.cart-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem;
+  column-gap: 2rem;
+}
+
+.cart-items-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.cart-item {
+  border: 0.1rem gray solid;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.5rem;
+}
+
+.item-info {
+  width: 65%;
+  padding: 1.5rem;
+  text-transform: capitalize;
+}
+
+.item-name,
+.item-price {
+  font-family: "Montserrat", sans-serif;
+}
+
+.item-utils {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.delete-btn {
+  font-family: "Montserrat", sans-serif;
+  border: black 0.1rem solid;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  color: black;
+  font-size: 0.9 em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.delete-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.item-quantity {
+  font-family: "Montserrat", sans-serif;
+}
+
+.item-img-container {
+  width: 35%;
+}
+
+.item-img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.cart-items-container {
+  width: 50%;
+}
+
+.empty-cart-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 20rem;
+}
+
+.empty-cart-txt,
+.discover-link {
+  font-family: "Montserrat", sans-serif;
+}
+
+.discover-btn {
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  border: 0.1rem black solid;
+  background: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  transition: 0.5s all ease;
+  width: 50%;
+}
+
+.discover-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.checkout-container {
+  width: 25%;
+  border: 0.1rem gray solid;
+  border-radius: 1rem;
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.checkout-heading {
+  padding: 0.5rem;
+}
+
+.checkout-details {
+  padding: 0.5rem;
+}
+
+.items-prices,
+.tax-prices,
+.delivery-prices,
+.total-prices {
+  display: flex;
+  justify-content: space-between;
+}
+
+.divider-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  height: 0.05rem;
+  width: 10rem;
+  background-color: gray;
+}
+
+.total-prices {
+  padding: 0.5rem;
+}
+
+.checkout-btn {
+  margin-top: 1rem;
+  width: 90%;
+  height: 2.25rem;
+  text-transform: capitalize;
+  border: 0.1rem black solid;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  transition: 0.5s all ease;
+  margin-bottom: 1rem;
+}
+
+.checkout-btn:hover {
+  background-color: black;
+  color: white;
+}
