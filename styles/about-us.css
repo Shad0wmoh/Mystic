@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap");
+
+section {
+  padding: 2rem;
+}
+
+.paragraph-heading {
+  font-family: "Playwrite HU", sans-serif;
+  font-weight: 500;
+  font-size: 3em;
+}
+
+section > p {
+  font-size: 1.45em;
+  margin-top: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 512px) {
+  .paragraph-heading {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 437px) {
+  .paragraph-heading {
+    font-size: 2em;
+  }
+
+  section > p {
+    font-size: 1.25em;
+  }
+}

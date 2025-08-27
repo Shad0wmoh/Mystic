@@ -1,7 +1,7 @@
 import { bestSellers } from "../data/products.js";
 import { addToCart, addToCartPopup, getProductInfo } from "./cart.js";
 
-let slides = document.querySelectorAll(".slide");
+let slides = document.querySelectorAll(".section-slide");
 let btns = document.querySelectorAll(".img-btn");
 let currentSlide = 1;
 
@@ -104,29 +104,20 @@ document.querySelectorAll(".show-info-btn").forEach((btn) => {
     const product = getProductInfo(productId);
 
     container.innerHTML = `
-        <div class="show-info-img-container">
-          <div class="sub-imgs-container">
-            <img
-              src="${product.image}"
-              class="sub-img"
-            />
-            <img
-              src="${product.image}"
-              class="sub-img"
-            />
-            <img
-              src="${product.image}"
-              class="sub-img"
-            />
-            <img
-              src="${product.image}"
-              class="sub-img"
-            />
-          </div>
-          <img
-            src="${product.modelImage}"
-            class="main-img"
-          />
+        <div class="carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev">🡸</button>
+          <button class="carousel-button next" data-carousel-button="next">🡺</button>
+          <ul data-slides>
+            <li class="slide" data-active>
+              <img src="${product.modelImage}">
+            </li>
+            <li class="slide">
+              <img src="${product.originalImage}">
+            </li>
+            <li class="slide">
+              <img src="${product.image}">
+            </li>
+          </ul>
         </div>
         <div class="show-info-desc-container">
           <h2 class="show-info-name">${product.name}</h2>
@@ -176,4 +167,21 @@ document.querySelectorAll(".show-info-btn").forEach((btn) => {
         addToCartPopup();
       });
   });
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.matches("[data-carousel-button]")) {
+    const offset = e.target.dataset.carouselButton === "next" ? 1 : -1;
+    const slides = e.target
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]");
+
+    const activeSlide = slides.querySelector("[data-active]");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
+
+    slides.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active;
+  }
 });

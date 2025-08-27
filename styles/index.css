@@ -19,11 +19,11 @@ a {
   text-decoration: none;
 }
 
-.carousel {
+.section-carousel {
   display: flex;
   max-width: 100%;
   height: auto;
-  position: relative; /* ensures absolute children behave consistently */
+  position: relative;
 }
 
 .img-carousel {
@@ -66,13 +66,13 @@ a {
   height: 100%;
 }
 
-.slide {
+.section-slide {
   width: 100%;
   display: none;
   transition: opacity 0.5s ease;
 }
 
-.slide.active {
+.section-slide.active {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -300,7 +300,7 @@ a {
   position: absolute;
   left: 50%;
   bottom: 30%;
-  transform: translate(-50%, 50%); /* fixed Safari 'translate' */
+  transform: translate(-50%, -50%);
   text-align: center;
   text-transform: capitalize;
   font-family: "Georgia", sans-serif;
@@ -458,7 +458,7 @@ a {
   border: black 0.1rem solid;
   font-size: 1em;
   cursor: pointer;
-  background-color: transparent; /* fixed from 'none' */
+  background-color: transparent;
   transition: all 0.15s ease;
   display: inline-block;
   writing-mode: horizontal-tb;
@@ -481,4 +481,76 @@ a {
   border: none;
   border-radius: 0.25rem;
   background: transparent;
+}
+
+.carousel {
+  width: 40%;
+  height: 90%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 2em;
+  bottom: 0;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: black;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+}
+
+.carousel-button:focus {
+  outline: 0.0625rem solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
 }

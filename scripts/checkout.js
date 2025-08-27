@@ -18,11 +18,7 @@ export function renderTotal() {
 
   priceElement.innerHTML = `${String(calculateItemsTotal().toFixed(2))} EGP`;
 
-  const taxPriceTxt = document.querySelector(".tax-price");
-  const taxPrice = calculateItemsTotal() * 0.14;
-  taxPriceTxt.innerHTML = `${String(taxPrice.toFixed(2))} EGP`;
-
-  const totalPrice = taxPrice + calculateItemsTotal();
+  const totalPrice = calculateItemsTotal();
   document.querySelector(".total-price").innerHTML = `${totalPrice.toFixed(
     2
   )} EGP`;
