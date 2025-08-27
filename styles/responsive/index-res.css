@@ -10,7 +10,7 @@
     bottom: 12rem;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(1rem);
-    -webkit-backdrop-filter: blur(1rem); /* iOS fix */
+    -webkit-backdrop-filter: blur(1rem);
     border-radius: 1rem;
     padding: 0.5rem 1rem;
   }
@@ -85,7 +85,7 @@
   }
 
   .our-story-section {
-    height: 100dvh; /* iOS fix for vh */
+    height: 100dvh;
     min-height: -webkit-fill-available;
   }
 
@@ -140,7 +140,7 @@
     background-image: url("../../assets/story-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: -webkit-fill-available; /* iOS safari fix */
+    min-height: -webkit-fill-available;
   }
 
   .story-info {

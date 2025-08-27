@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/checkout.css" />
+
+    <script src="scripts/nav.js" defer></script>
+    <script type="module" src="scripts/cart.js" defer></script>
+    <script type="module" src="scripts/place-order.js" defer></script>
+  </head>
+  <body>
+    <div class="responsive-nav-menu" id="rep-nav-menu">
+      <div class="responsive-links-sec">
+        <a href="index.html" class="responsive-link">Home</a>
+        <a href="bags-category.html" class="responsive-link">Bags</a>
+        <a href="accessories-category.html" class="responsive-link"
+          >Accessories</a
+        >
+        <a href="about-us.html" class="responsive-link">About Us</a>
+        <a href="contact-us.html" class="responsive-link">Contact Us</a>
+      </div>
+
+      <div class="responsive-utils">
+        <div class="cart-btn">
+          <a href="cart.html" class="util-btn">
+            <img
+              src="assets/icons/cart-icon-white.png"
+              class="util-btn-img"
+              alt="Cart"
+            />
+          </a>
+          <span class="cart-counter">0</span>
+        </div>
+        <a href="#" class="util-btn">
+          <img
+            src="assets/icons/user-icon-white.png"
+            class="util-btn-img"
+            alt="Profile"
+          />
+        </a>
+      </div>
+    </div>
+    <nav>
+      <div class="responsive-nav-util">
+        <div class="nav-line line-1"></div>
+        <div class="nav-line line-2"></div>
+        <div class="nav-line line-3"></div>
+      </div>
+
+      <div class="links-sec">
+        <a href="index.html" class="link">Home</a>
+        <a href="bags-category.html" class="link">Bags</a>
+        <a href="accessories-category.html" class="link">Accessories</a>
+        <a href="about-us.html" class="link">About Us</a>
+        <a href="contact-us.html" class="link">Contact Us</a>
+        <div class="logo-sec">
+          <a href="index.html" class="logo">
+            <img
+              src="assets/main-logo-long-black.png"
+              alt="Mystic Logo"
+              class="logo-img"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="responsive-logo-sec">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/main-logo-long-black.png"
+            alt="Mystic Logo"
+            class="responsive-logo-img"
+          />
+        </a>
+      </div>
+
+      <div class="utils-sec">
+        <div class="cart-btn">
+          <a href="cart.html" class="util-btn">
+            <img
+              src="assets/icons/cart-icon.png"
+              class="util-btn-img"
+              alt="Cart"
+            />
+          </a>
+          <span class="cart-counter">0</span>
+        </div>
+        <a href="#" class="util-btn">
+          <img
+            src="assets/icons/user-icon.png"
+            class="util-btn-img"
+            alt="Profile"
+          />
+        </a>
+      </div>
+    </nav>
+
+    <h1 class="section-heading">Checkout</h1>
+
+    <section>
+      <form class="order-form">
+        <label>Full Name</label>
+        <input type="text" class="name" name="Name" required />
+
+        <label>Phone Number</label>
+        <input type="tel" class="phone" name="Phone" required />
+
+        <label>Street Name</label>
+        <input type="text" class="street" name="Street" required />
+
+        <label>Building Number</label>
+        <input type="text" class="building" name="Building" required />
+
+        <label>Apartment Number</label>
+        <input type="text" class="apartment" name="Apartment" required />
+
+        <button type="submit" class="checkout-btn">Place Order</button>
+      </form>
+    </section>
+  </body>
+</html>

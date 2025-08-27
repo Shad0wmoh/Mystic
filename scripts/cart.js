@@ -157,4 +157,10 @@ function updateCartQuantity() {
 document.addEventListener("DOMContentLoaded", () => {
   updateCartQuantity();
   renderTotal();
+
+  if (cart.length > 0) {
+    document.querySelector(".checkout-btn").addEventListener("click", () => {
+      window.location.href = "../checkout.html";
+    });
+  }
 });

@@ -119,6 +119,7 @@ section {
   width: 40%;
   height: 90%;
   position: relative;
+  border: 1px red solid;
 }
 
 .slide {
