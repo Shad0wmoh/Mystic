@@ -159,10 +159,8 @@ document.addEventListener("DOMContentLoaded", () => {
   renderTotal();
 
   if (cart.length > 0) {
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelector(".checkout-btn").addEventListener("click", () => {
-        window.location.href = "../checkout.html";
-      });
+    document.querySelector(".checkout-btn").addEventListener("click", () => {
+      window.location.href = "../checkout.html";
     });
   }
 });
