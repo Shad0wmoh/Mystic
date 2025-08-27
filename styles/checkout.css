@@ -44,3 +44,7 @@
   background-color: black;
   color: white;
 }
+
+.missing-txt {
+  display: none;
+}
