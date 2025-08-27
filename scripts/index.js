@@ -105,8 +105,8 @@ document.querySelectorAll(".show-info-btn").forEach((btn) => {
 
     container.innerHTML = `
         <div class="carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev">🡸</button>
-          <button class="carousel-button next" data-carousel-button="next">🡺</button>
+          <button class="carousel-button prev" data-carousel-button="prev">&#8592</button>
+          <button class="carousel-button next" data-carousel-button="next">&#8594</button>
           <ul data-slides>
             <li class="slide" data-active>
               <img src="${product.modelImage}">
