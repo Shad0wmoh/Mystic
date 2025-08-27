@@ -119,7 +119,6 @@ section {
   width: 40%;
   height: 90%;
   position: relative;
-  border: 1px red solid;
 }
 
 .slide {
@@ -147,7 +146,7 @@ section {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -163,8 +162,7 @@ section {
   background: none;
   border: none;
   font-size: 2em;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 0;
   color: white;
   cursor: pointer;
   border-radius: 0.25rem;

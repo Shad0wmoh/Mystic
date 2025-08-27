@@ -96,6 +96,11 @@
   .exit-btn {
     right: 2rem;
   }
+
+  .carousel {
+    height: 100%;
+    width: 60%;
+  }
 }
 
 @media (max-width: 430px) {
@@ -113,6 +118,10 @@
     margin-top: 0.5rem;
     display: block;
   }
+
+  .carousel-button {
+    font-size: 1.55em;
+  }
 }
 
 @media (max-width: 381px) {
@@ -121,8 +130,28 @@
   }
 }
 
+@media (max-width: 356px) {
+  .slide > img {
+    transform: scale(1.25);
+  }
+
+  .carousel-button {
+    font-size: 1.25em;
+  }
+
+  .show-info-name {
+    margin-top: 1rem;
+  }
+}
+
 @media (max-width: 351px) {
   .product-img {
     width: 13rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .slide > img {
+    transform: scale(1.25);
   }
 }
