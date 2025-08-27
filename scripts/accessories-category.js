@@ -48,9 +48,6 @@ document.querySelectorAll(".show-info-btn").forEach((btn) => {
           <button class="carousel-button next" data-carousel-button="next">🡺</button>
           <ul data-slides>
             <li class="slide" data-active>
-              <img src="${product.modelImage}">
-            </li>
-            <li class="slide">
               <img src="${product.originalImage}">
             </li>
             <li class="slide">
