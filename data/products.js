@@ -6,7 +6,6 @@ export const bestSellers = [
     image: "../assets/bags/bags-transparent/golden-night-transparent.png",
     modelImage: "../assets/bags/bags-models/golden-night-model.jpeg",
     originalImage: "../assets/bags/originals/golden-night.png",
-    size: "63cm - 100cm",
     type: "bag",
   },
   {
@@ -16,7 +15,6 @@ export const bestSellers = [
     image: "../assets/bags/bags-transparent/golden-transparent.png",
     modelImage: "../assets/bags/bags-models/golden-model.jpeg",
     originalImage: "../assets/bags/originals/golden.png",
-    size: "60cm - 120cm",
     type: "bag",
   },
   {
@@ -26,7 +24,6 @@ export const bestSellers = [
     image: "../assets/bags/bags-transparent/midnight-transparent.png",
     modelImage: "../assets/bags/bags-models/midnight-model.jpg",
     originalImage: "../assets/bags/originals/midnight.png",
-    size: "60cm - 120cm",
     type: "bag",
   },
 ];
@@ -39,7 +36,6 @@ export const products = [
     image: "../assets/bags/bags-transparent/golden-night-transparent.png",
     modelImage: "../assets/bags/bags-models/golden-night-model.jpeg",
     originalImage: "../assets/bags/originals/golden-night.png",
-    size: "63cm - 100cm",
     type: "bag",
   },
   {
@@ -58,7 +54,6 @@ export const products = [
     image: "../assets/bags/bags-transparent/midnight-transparent.png",
     modelImage: "../assets/bags/bags-models/midnight-model.jpg",
     originalImage: "../assets/bags/originals/midnight.png",
-    size: "60cm - 120cm",
     type: "bag",
   },
   {
