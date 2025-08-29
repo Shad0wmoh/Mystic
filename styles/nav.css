@@ -7,12 +7,6 @@
   color: black;
 }
 
-body {
-  background-image: url("/assets/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 a {
   text-decoration: none;
 }
@@ -170,8 +164,7 @@ nav {
 }
 
 @media (max-width: 920px) {
-  .links-sec,
-  .utils-sec {
+  .links-sec {
     display: none;
   }
 
@@ -184,18 +177,38 @@ nav {
   }
 
   nav {
-    padding: 2rem 2rem;
+    padding: 2rem;
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 400px) {
+  .responsive-logo-sec {
+    left: 11rem;
+  }
+}
+
+@media (max-width: 370px) {
   .responsive-logo-sec {
     width: 9rem;
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 345px) {
+  .responsive-logo-sec {
+    left: 10rem;
+    width: 8.5rem;
+  }
+}
+
+@media (max-width: 325px) {
   .responsive-logo-sec {
     width: 8rem;
+  }
+}
+
+@media (max-width: 315px) {
+  .responsive-logo-sec {
+    width: 7rem;
+    left: 9rem;
   }
 }

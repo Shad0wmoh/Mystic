@@ -189,12 +189,12 @@
 
 @media (max-width: 340px) {
   .slogan {
-    font-size: 1.3em;
+    font-size: 2em;
   }
 }
 
 @media (max-width: 311px) {
   .slogan {
-    font-size: 1.2em;
+    font-size: 1.75em;
   }
 }
