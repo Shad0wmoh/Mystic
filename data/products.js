@@ -292,7 +292,7 @@ export const products = [
   {
     id: "739N-8BI1-BNOG-QD4W",
     name: "Beige Garden",
-    price: 450,
+    price: 600,
     image: "../assets/bags/bags-transparent/beige-garden-transparent.png",
     originalImage: "../assets/bags/originals/beige-garden.jpeg",
     modelImage: "../assets/bags/bags-models/beige-garden.jpeg",
