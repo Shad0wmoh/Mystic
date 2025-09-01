@@ -56,3 +56,9 @@ function repeat() {
   repeater();
 }
 repeat();
+
+document.querySelectorAll(".shop-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    window.location.href = "../bags-category.html";
+  });
+});
