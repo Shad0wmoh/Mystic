@@ -1,33 +1,3 @@
-export const bestSellers = [
-  {
-    id: "7XTC-JDS0-JDDB-R69V",
-    name: "Golden Night",
-    price: 1100,
-    image: "../assets/bags/bags-transparent/golden-night-transparent.png",
-    modelImage: "../assets/bags/bags-models/golden-night-model.jpeg",
-    originalImage: "../assets/bags/originals/golden-night.png",
-    type: "bag",
-  },
-  {
-    id: "LKZR-N61U-DNSK-XLRP",
-    name: "Rich Gold",
-    price: 850,
-    image: "../assets/bags/bags-transparent/golden-transparent.png",
-    modelImage: "../assets/bags/bags-models/golden-model.jpeg",
-    originalImage: "../assets/bags/originals/golden.png",
-    type: "bag",
-  },
-  {
-    id: "ERUH-0BJW-SPYL-YWSW",
-    name: "Elegance Time",
-    price: 700,
-    image: "../assets/bags/bags-transparent/midnight-transparent.png",
-    modelImage: "../assets/bags/bags-models/midnight-model.jpg",
-    originalImage: "../assets/bags/originals/midnight.png",
-    type: "bag",
-  },
-];
-
 export const products = [
   {
     id: "7XTC-JDS0-JDDB-R69V",
